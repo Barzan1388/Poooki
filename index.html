@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile App UI</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #4a0e4e, #2c3e50);
+            color: white;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .moon {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .moon svg {
+            width: 100px;
+            height: 100px;
+            color: #ffd700;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        h1,
+        h2 {
+            text-align: center;
+        }
+        
+        .tasks {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .youtube-icon {
+            margin-right: 20px;
+        }
+        
+        .youtube-icon svg {
+            width: 48px;
+            height: 48px;
+            color: #ff0000;
+        }
+        
+        .glass-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .glass-box:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+        }
+        
+        .social-link svg {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="moon">
+            <i data-feather="moon"></i>
+        </div>
+        <h1>Perform Tasks</h1>
+
+        <div class="tasks">
+            <div class="youtube-icon">
+                <i data-feather="youtube" onclick="window.location.href='https://www.youtube.com'"></i>
+            </div>
+            <div style="flex-grow: 1;">
+                <div class="glass-box" onclick="window.location.href='/task1'">Task 1</div>
+                <div class="glass-box" onclick="window.location.href='/task2'">Task 2</div>
+            </div>
+        </div>
+
+        <h2>List</h2>
+
+        <div class="glass-box social-link" onclick="window.location.href='https://t.me/offcoin2024'">
+            <i data-feather="send"></i> Follow us on Telegram
+        </div>
+        <div class="glass-box social-link" onclick="window.location.href='https://www.instagram.com/off_.community/?utm_source=qr&r=nametag'">
+            <i data-feather="instagram"></i> Follow us on Instagram
+        </div>
+        <div class="glass-box social-link" onclick="window.location.href='https://x.com/mouse_playful?t=6DoPMtG-UBDFBlrQj_477g&s=09'">
+            <i data-feather="twitter"></i> Follow us on X
+        </div>
+        <div class="glass-box social-link" onclick="window.location.href='https://www.youtube.com/@off_community'">
+            <i data-feather="youtube"></i> Follow us on YouTube
+        </div>
+    </div>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+
+</html>
